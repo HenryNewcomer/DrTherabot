@@ -221,4 +221,51 @@ $(document).ready(function() {
             $("#messages").focus();
         }
     });
+
+    /********
+     * Cookie Consent Banner
+     *******/
+
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+        document.getElementById('cookie-banner').style.display = 'none';
+        // Set a cookie to remember the user's choice (optional, requires a cookie handling function)
+        setCookie('accepts-cookies', 'true', 365);
+    });
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    // Function to get a cookie
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+
+    // Check for the cookie when the page loads
+    window.onload = function() {
+        if (getCookie('accepts-cookies')) {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    };
+
 });
+
+window.onload = function() {
+    if (!getCookie('accepts-cookies')) {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+};

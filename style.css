@@ -13,7 +13,8 @@ Accent #ffc824 / #e2a66e
 */
 
 html {
-  padding: 32px;
+  height: 100%;
+  padding: 32px 32px 24px 32px;
 }
 
 body {
@@ -24,6 +25,9 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   color: #ffffff;
   font-size: 1.4rem;
   max-width: 95%;
@@ -53,6 +57,12 @@ a:visited {
 a:hover {
   color: #ffad77;
   text-decoration: none;
+}
+
+h1, h2, h3 {
+  color: #d3e9ff;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 hr {
@@ -148,6 +158,10 @@ main {
   background-image: url(/img/messages-bg.png);
   background-repeat: no-repeat;
   background-position: right;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   border-radius: 32px;
   box-shadow: inset 0 0 16px rgba(0,0,0,0.4);
   cursor: default !important;
@@ -427,42 +441,16 @@ i.material-icons {
   font-weight: bold;
 }
 
-.chat_history {
-  list-style-type: none;
-  border: 1px solid red;
-  margin: 32px;
-  padding: 32px;
-}
-
-.chat_history li {
-  border: 1px solid red;
-  margin-bottom: 10px;
-}
-
-.chat_history li p {
-  border: 1px solid red;
-  margin: 0;
-}
-
-.clear_history {
-  border: 1px solid red;
-  background-color: #aad0c2;
-  border-radius: 5px;
-  color: #ffffff;
-  font-size: larger;
-  padding: 10px;
-}
-
 footer {
   margin: auto;
-  padding-bottom: 8px;
+  padding-top: 20px;
   text-align: center;
   width: 50%;
 }
 
 
 /********/
-/* Tabs */
+/* Tabs
 /********/
 
 #tabs {
@@ -576,12 +564,6 @@ footer {
   padding-bottom: 18px;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 812px) {
-  .tabbed-content li {
-    margin-left: 12px;
-  }
-}
-
 .tabbed-content {
   display: block;
 }
@@ -589,6 +571,57 @@ footer {
 .tabbed-content:not(.active) {
   display: none;
 }
+
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+  .tabbed-content {
+    padding: 4px;
+  }
+  .tabbed-content li {
+    margin-left: 12px;
+  }
+}
+
+ul.resources {
+  list-style: none;
+  padding-left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+ul.resources li {
+  margin-bottom: 32px;
+}
+
+div.resource {
+  color: #1ca091;
+  font-weight: bold;
+  font-size: 1.6em;
+  margin-left: -100px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+div.contact-resource {
+  color:rgb(162, 202, 255);
+  font-weight: bolder;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+  ul.resources li,
+  ul.resources ul,
+  div.resource {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+
+/************
+* FORM
+************/
 
 form {
   margin-top: 32px;
@@ -780,3 +813,40 @@ form input[type="submit"]:focus {
 #modal-container .form-confirmation {
   color: #54EC78;
 }
+
+
+/************
+* Cookie Consent Banner
+************/
+
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  padding: 20px;
+  background: #214878;
+  box-shadow: 4px 0 8px  rgba(78, 143, 222, 0.8);;
+  border-top: 2px solid #3676c3;
+  text-align: center;
+  z-index: 9999;
+}
+
+#cookie-banner p {
+  margin: 0;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+#accept-cookies {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 16px;
+  background-color: #008CBA;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+

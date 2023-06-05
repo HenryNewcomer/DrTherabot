@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Therabot :: Always free & always anonymous</title>
+    <meta name="description" content="Dr. Therabot is a free, anonymous, and secure chatbot that can help you with your mental health.">
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>let fullConvo = [<?php echo "['system', '" . $_POST['welcome_message'] . "']"; ?>];</script>
@@ -15,6 +16,15 @@
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Cormorant+Garamond|Material+Icons">
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N67DE7J9GR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N67DE7J9GR');
+</script>
 <body>
     <header>
         <div class="loading" style="display: none">
@@ -46,11 +56,16 @@
         <?php include_once(__DIR__ . '/tabs.php'); ?>
     </main>
     <footer>
-        <div><a href="#">Privacy Policy</a></div>
+        <div><a href="/privacy.php" rel="noopener noreferrer" target="_blank">Privacy Policy</a></div>
         <div style="display: flex; justify-content: center; margin: 40px auto 0 auto;">
             <stripe-buy-button buy-button-id="buy_btn_1NFcleBClekrrtr0fmDH3Rht" publishable-key="pk_live_51NFRHgBClekrrtr0jP6bGKLoSznmMYF2ZaA8YliLyQAj1arhMir8zr6IvUCzUkORTxQlefWPkkAWJ1j3olQ3pZjJ00AxyutCA1"></stripe-buy-button>
         </div>
         <p>Copyright &copy; Henry Newcomer 2023</p>
+        <p><img src="/img/thumbs-up.png" width="120" height="120"></p>
     </footer>
+    <div id="cookie-banner">
+        <p><em>We</em> don't save your data, but Google Analytics stores cookies on your computer. <a href="/privacy.php">Learn more</a></p>
+        <button id="accept-cookies">Accept</button>
+    </div>
 </body>
 </html>
