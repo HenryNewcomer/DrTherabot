@@ -73,7 +73,39 @@ hr {
   margin: 64px 0;
 }
 
-.reglog {
+div.with-img {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+div.with-img img {
+  margin-right: 16px;
+}
+
+div.with-img .right {
+  max-width: calc(100% - 416px);
+}
+
+div.center {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.highlight {
+  color: #5dbd5d;
+  text-shadow: 2px 2px 4px #000;
+}
+
+div.center img {
+  border-radius: 32px;
+  box-shadow: 2px 2px 16px rgba(0,0,0,0.7);
+  margin: 8px 8px 24px 8px;
+  padding: 8px;
+}
+
+.reglog { /* TODO: Remove? */
   padding: 20px;
   text-align: right;
   width: 100%;

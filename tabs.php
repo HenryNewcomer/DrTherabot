@@ -5,7 +5,7 @@
         <li><a href="#anonymous" class="tab">Always FREE &amp; Anonymous</a></li>
         <li><a href="#resources" class="tab">Online Help &amp; Resources</a></li>
         <li><a href="#service-animals" class="tab">How Service Animals Help</a></li>
-        <li><a href="#about-me" class="tab">About the Developer</a></li>
+        <!--<li><a href="#about-me" class="tab">About the Developer</a></li>-->
     </ul>
     </nav>
     <div class="tabbed-content" id="what-is-this">
@@ -13,7 +13,7 @@
 
         <p>Dr. Therabot is a free, anonymous, and confidential mental health support service that uses large language models to provide users with personalized therapy and support. Dr. Therabot is available to anyone who needs it, regardless of their location, income, or insurance status.</p>
 
-        <p>IMPORTANT: that Dr. Therabot is meant to be available to help anyone and everyone, but <strong><em>nothing beats a human therapist</em></strong>. Please seek one for proper support.</p>
+        <p><span class="highlight">Important:</span> Dr. Therabot is meant to be available to help anyone and everyone, but <strong><em>nothing beats a human therapist</em></strong>. Please seek one for proper support.</p>
         <div style="text-align: center;">
             <a href="https://www.betterhelp.com/advice/therapy/how-do-i-find-a-therapist-near-me/" target="_blank" rel="noopener noreferrer" class="button">Find a Therapist Near Me</a>
             <p>If you're feeling suicidal or in a crisis, put this down and immediately get professional help.</p>
@@ -42,12 +42,13 @@
     </div>
     <div class="tabbed-content" id="anonymous">
         <h2>Always anonymous</h2>
-        <p>Yup! Always free<sup>*</sup> and always anonymous!<sup>**</sup></p>
+        <p>Yup! <span class="highlight">Always free<sup>*</sup></span> and <span class="highlight">always anonymous!<sup>**</sup></span></p>
         <p>* We currently use OpenAI's API. Due to this, it's best to assume they collect some sort of information about your messages. We have no say in this.</p>
         <p>** Since we use OpenAI's API, every word sent costs money. <em>Please consider donating if you find this app worthwhile.</em></p>
     </div>
     <div class="tabbed-content" id="resources">
         <h2>Online Help &amp; Resources</h2>
+        <div class="center"><img src="/img/helping-each-other.png" alt="Helping people" width="400" height="400"></div>
         <ul class="resources">
             <li><div class="resource">National Suicide Prevention Lifeline:</div><br>
                 <div class="contact-resource">1-800-273-8255</div><br>
@@ -84,10 +85,15 @@
     <div class="tabbed-content" id="service-animals">
         <h2>How Service Animals Help</h2>
         <p>Animals have been shown to have a number of benefits for mental health. For example, they can help to reduce stress, anxiety, and depression. They can also help to improve mood, social interaction, and overall well-being.</p>
-        <p>One of the ways that animals can help mental health is by providing companionship. Companionship is important for mental health because it provides a sense of belonging and support. Animals can provide companionship in a number of ways. They can be a source of comfort and support, especially during difficult times. They can also provide a sense of purpose and responsibility.</p>
-        <p>Another way that animals can help mental health is by providing physical activity. Physical activity is important for mental health because it releases endorphins, which have mood-boosting effects. Animals can encourage physical activity in a number of ways. They can provide a reason to get outside and exercise. They can also provide motivation to keep moving.</p>
-        <p>“Pets can provide companionship, unconditional love, and a sense of purpose, all of which can help improve mental health,” said Dr. Jodi Bennett, a psychiatrist and spokesperson for the <a href="https://www.psychiatry.org/News-room/News-Releases/Positive-Mental-Health-Impact-of-Pets" target="_blank">American Psychiatric Association</a>.</p>
-        <p>Finally, animals can help mental health by providing unconditional love. Unconditional love is important for mental health because it provides a sense of security and acceptance. Animals can provide unconditional love in a number of ways. They are always happy to see their owners, no matter what. They are also non-judgmental and accepting.</p>
+        <div class="with-img">
+            <img src="/img/doggo.png" alt="Kid &amp; dog" width="400" height="400">
+            <div class="right">
+                <p>One of the ways that animals can help mental health is by providing companionship. Companionship is important for mental health because it provides a sense of belonging and support. Animals can provide companionship in a number of ways. They can be a source of comfort and support, especially during difficult times. They can also provide a sense of purpose and responsibility.</p>
+                <p>Another way that animals can help mental health is by providing physical activity. Physical activity is important for mental health because it releases endorphins, which have mood-boosting effects. Animals can encourage physical activity in a number of ways. They can provide a reason to get outside and exercise. They can also provide motivation to keep moving.</p>
+                <p>“Pets can provide companionship, unconditional love, and a sense of purpose, all of which can help improve mental health,” said Dr. Jodi Bennett, a psychiatrist and spokesperson for the <a href="https://www.psychiatry.org/News-room/News-Releases/Positive-Mental-Health-Impact-of-Pets" target="_blank">American Psychiatric Association</a>.</p>
+                <p>Finally, animals can help mental health by providing unconditional love. Unconditional love is important for mental health because it provides a sense of security and acceptance. Animals can provide unconditional love in a number of ways. They are always happy to see their owners, no matter what. They are also non-judgmental and accepting.</p>
+            </div>
+        </div>
         
         <p>Here are some quotes from the <a href="https://newsinhealth.nih.gov/2018/02/power-pets#:~:text=Interacting%20with%20animals%20has%20been,support%2C%20and%20boost%20your%20mood." target="_blank">National Institues of Health</a> (part of the US Department of Health and Human Services) that support these claims:</p>
         <ul>
@@ -102,6 +108,6 @@
     </div>
     <div class="tabbed-content" id="about-me">
         <h2>About the Developer: Henry Newcomer</h2>
-        <p>TEXT</p>
+        <p>I'll fill this in later :)</p>
     </div>
 </div>

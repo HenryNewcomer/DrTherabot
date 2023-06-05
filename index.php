@@ -61,7 +61,7 @@
             <stripe-buy-button buy-button-id="buy_btn_1NFcleBClekrrtr0fmDH3Rht" publishable-key="pk_live_51NFRHgBClekrrtr0jP6bGKLoSznmMYF2ZaA8YliLyQAj1arhMir8zr6IvUCzUkORTxQlefWPkkAWJ1j3olQ3pZjJ00AxyutCA1"></stripe-buy-button>
         </div>
         <p>Copyright &copy; Henry Newcomer 2023</p>
-        <p><img src="/img/thumbs-up.png" width="120" height="120"></p>
+        <p><img src="/img/thumbs-up.png" alt=":)" width="120" height="120"></p>
     </footer>
     <div id="cookie-banner">
         <p><em>We</em> don't save your data, but Google Analytics stores cookies on your computer. <a href="/privacy.php">Learn more</a></p>
