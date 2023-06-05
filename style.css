@@ -18,6 +18,8 @@ html {
 
 body {
   background-color: #1f263d;
+  background-image: url(https://cdn.discordapp.com/attachments/1103420311363387524/1115133597662314640/aClicheName_change_the_expression._Make_the_background_dark_blu_4f130d36-c389-4056-9d8c-2993074eb3f2.png);
+  height: 100%;
   color: #ffffff;
   font-size: 1.4rem;
   max-width: 95%;
@@ -35,6 +37,26 @@ html, body {
     margin: 0 auto;
     padding: 0;
   }
+}
+
+a:link,
+a:active,
+a:visited {
+  color: #ffc824;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffad77;
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  border-top: 4px solid #214878;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(66, 177, 202, 0.3);
+  margin: 64px 0;
 }
 
 .reglog {
@@ -316,15 +338,17 @@ i.material-icons {
   }
 }
 
-.loading_indicator {
-  position: absolute;
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;  /* use fixed instead of absolute to keep it centered even when scrolling */
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  visibility: hidden; /* temp? */
 }
 
 .errors {
@@ -473,10 +497,12 @@ footer {
 .tabbed-content p,
 .tabbed-content ul {
   padding-bottom: 32px;
+  list-style-type: circle;
 }
 
 .tabbed-content li {
   margin-left: 100px;
+  padding-bottom: 18px;
 }
 
 @media only screen and (min-width: 375px) and (max-width: 812px) {

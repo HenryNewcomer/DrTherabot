@@ -12,15 +12,16 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>let fullConvo = [<?php echo "['system', '" . $_POST['welcome_message'] . "']"; ?>];</script>
     <script src="/js/global.js" async defer></script>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Cormorant+Garamond|Material+Icons">
 </head>
 <body>
     <header>
-        <div class="loading_indicator"></div>
+        <div class="loading" style="display: none">Loading...</div>
         <div class="errors"></div>
     </header>
     <main class="message_window">
-        <div id="messages"></div>
+        <div id="messages" tabindex="0"></div>
         <div class="your_message">
             <label class="header" for="prompt">Your message:</label>
             <div class="container">
@@ -35,6 +36,9 @@
         <?php include_once(__DIR__ . '/tabs.php'); ?>
     </main>
     <footer>
+        <div style="display: flex; justify-content: center; margin: 40px auto 0 auto;">
+            <stripe-buy-button buy-button-id="buy_btn_1NFT0yBClekrrtr0l4tmRsJO" publishable-key="pk_live_51NFRHgBClekrrtr0jP6bGKLoSznmMYF2ZaA8YliLyQAj1arhMir8zr6IvUCzUkORTxQlefWPkkAWJ1j3olQ3pZjJ00AxyutCA1"></stripe-buy-button>
+        </div>
         <p>Copyright &copy; Henry Newcomer 2023</p>
     </footer>
 </body>

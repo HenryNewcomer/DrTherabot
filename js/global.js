@@ -120,18 +120,37 @@ $(document).ready(function() {
     function htmlMessage(role, content) {
         let s = "";
         if (content != '[start]') {
-            who = role == 'user' ? 'You' : 'Dr. Therabot';
-            s = "<div class="+role+">"+who+":</div><div class=\"message\">"+content+"</div>\n"; // TODO: Filter content for html chars.
+            let who = role == 'user' ? 'You' : 'Dr. Therabot'; 
+            content = escapeHTML(content);
+            // Replace known abbreviations with placeholders
+            content = content.replace(/Dr\./g, 'Dr_');
+            let sentences = content.match(/[^.!?]+[.!?]*[^.!?]*[.!?]*/g) || [];
+            let message = "";
+            for (let i = 0; i < sentences.length; i++) {
+                if (sentences[i] !== '') {
+                    // Replace placeholder with original abbreviation in each sentence
+                    sentences[i] = sentences[i].replace(/Dr_/g, 'Dr.');
+                    message += "<p>" + sentences[i].trim() + "</p>\n"; // wrap each sentence in a p tag
+                }
+            }
+            s = "<div class="+role+">"+who+":</div><div class=\"message\">"+message+"</div>\n"; // TODO: Filter content for html chars.
         }
         return s;
     }
 
+    function escapeHTML(str) {
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(str));
+        return div.innerHTML;
+    }
+    
+
     function htmlConvo(convo) {
         let s = "";
         if (Array.isArray(convo) && convo.length > 0) {
-        for (var i = 0; i < convo.length; i++) {
-            s += htmlMessage(convo[i][0], convo[i][1]);
-        }
+            for (var i = 0; i < convo.length; i++) {
+                s += htmlMessage(convo[i][0], convo[i][1]);
+            }
         }
         return s;
     }
@@ -150,7 +169,8 @@ $(document).ready(function() {
         event.preventDefault();
         if (allow_send) {
             allow_send = false;
-            let newPromptText = $("#newPrompt").val();
+            let newPromptText = $("#newPrompt").val().replace(/[\\$@%^*]/g, "");
+            
             $('#submit').prop('disabled', true);
             /* let newPromptText = $("#newPrompt").serialize(); */
             let convoSoFar = $('#messages').html();
@@ -162,36 +182,43 @@ $(document).ready(function() {
             }
 
             fullConvo.push(addToArray('user', newPromptText));
-                htmlMessage('user', newPromptText);
+            htmlMessage('user', newPromptText);
         
             out = htmlConvo(fullConvo);   
-                                                                                    // NOTE: CURRENTLY MISSING: html template
-            $('#messages').html(out);                        // TODO: newPromptText should be appended to the previous HTML <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+            $('#messages').html(out);
             $('#messages').scrollTop($("#messages")[0].scrollHeight);
-                $('#newPrompt').val('');
+            $('#newPrompt').val('');
+
+            $('.loading').css('display', 'flex');
 
             $.ajax({
                 type: 'POST',
                 url: 'chat.php',
-                    data: {newPromptText: newPromptText, fullConvo: fullConvo},
+                data: {newPromptText: newPromptText, fullConvo: fullConvo},
         
                 success: function (response) {
                     $('#submit').prop('disabled', false);
                     /* let converted = arrayToHtml(newPromptText); */
                     fullConvo.push(addToArray('assistant',response));
                     messageCount++;
-            // TODInsert htmlMessage() update.
                     converted = htmlConvo(fullConvo);
                     /* fullConvo.push(converted); */
 
                     $('#messages').html(converted);
+                    $('#messages').scrollTop($("#messages")[0].scrollHeight);
+                    $('#messages').html(converted);
                     allow_send = true;
+                    $('.loading').hide();
                 },
                 error: function(xhr, status, error) {
                     console.error("Error: " + error);
+                    $('.loading').hide();
                 },
                 timeout: 10000 // 10 seconds
             });
+
+            $("#newPrompt").blur();
+            $("#messages").focus();
         }
     });
 });
