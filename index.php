@@ -1,13 +1,13 @@
 <?php
-    require_once(__DIR__ . '/chat.php');
     $_POST['welcome_message'] = !empty($_POST['welcome_message']) ? $_POST['welcome_message'] : "[start]";
+    require_once(__DIR__ . '/chat.php');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Therabotist :: Your personal GPT-powered therapist. Always available when you need it. ALWAYS FREE &amp; ALWAYS ANONYMOUS.</title>
+    <title>Dr. Therabot :: Always free & always anonymous</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>let fullConvo = [<?php echo "['system', '" . $_POST['welcome_message'] . "']"; ?>];</script>

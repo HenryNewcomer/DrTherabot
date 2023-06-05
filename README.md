@@ -1,4 +1,4 @@
-# Therabotist
+# Dr. Therabot
 
 
 ## Setup:
