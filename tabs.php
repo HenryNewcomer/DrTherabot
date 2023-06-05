@@ -3,6 +3,8 @@
     <ul>
         <li><a href="#what-is-this" class="tab">What is This?</a></li>
         <li><a href="#anonymous" class="tab">Always FREE &amp; Anonymous</a></li>
+        <li><a href="#resources" class="tab">Online Help &amp; Resources</a></li>
+        <li><a href="#service-animals" class="tab">How Service Animals Help</a></li>
         <li><a href="#about-me" class="tab">About the Developer</a></li>
     </ul>
     </nav>
@@ -46,8 +48,16 @@
         <p>* We currently use OpenAI's API. Due to this, it's best to assume they collect some sort of information about your messages. We have no say in this.</p>
         <p>** Since we use OpenAI's API, every word sent costs money. <em>Please consider donating if you find this app worthwhile.</em></p>
     </div>
+    <div class="tabbed-content" id="resources">
+        <h2>Online Help &amp; Resources</h2>
+        <p>TEXT</p>
+    </div>
+    <div class="tabbed-content" id="service-animals">
+        <h2>How Service Animals Help</h2>
+        <p>[Give evidence that service animals - or other non-human relationships, have mentally helped people. Use that as a base to describe how Dr. Therabot can similarly help.]</p>
+    </div>
     <div class="tabbed-content" id="about-me">
-        <h2>Help</h2>
+        <h2>About the Developer: Henry Newcomer</h2>
         <p>TEXT</p>
     </div>
 </div>

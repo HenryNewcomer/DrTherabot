@@ -17,7 +17,17 @@
 </head>
 <body>
     <header>
-        <div class="loading" style="display: none">Loading...</div>
+        <div class="loading" style="display: none">
+            <div class="spinner">
+                <div class="dot dot1"></div>
+                <div class="dot dot2"></div>
+                <div class="dot dot3"></div>
+                <div class="dot dot4"></div>
+                <div class="dot dot5"></div>
+                <div class="dot dot6"></div>
+                <div class="dot dot7"></div>
+                <div class="dot dot8"></div>
+            </div>
         <div class="errors"></div>
     </header>
     <main class="message_window">
@@ -37,7 +47,7 @@
     </main>
     <footer>
         <div style="display: flex; justify-content: center; margin: 40px auto 0 auto;">
-            <stripe-buy-button buy-button-id="buy_btn_1NFT0yBClekrrtr0l4tmRsJO" publishable-key="pk_live_51NFRHgBClekrrtr0jP6bGKLoSznmMYF2ZaA8YliLyQAj1arhMir8zr6IvUCzUkORTxQlefWPkkAWJ1j3olQ3pZjJ00AxyutCA1"></stripe-buy-button>
+            <stripe-buy-button buy-button-id="buy_btn_1NFcleBClekrrtr0fmDH3Rht" publishable-key="pk_live_51NFRHgBClekrrtr0jP6bGKLoSznmMYF2ZaA8YliLyQAj1arhMir8zr6IvUCzUkORTxQlefWPkkAWJ1j3olQ3pZjJ00AxyutCA1"></stripe-buy-button>
         </div>
         <p>Copyright &copy; Henry Newcomer 2023</p>
     </footer>

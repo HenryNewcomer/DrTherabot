@@ -18,7 +18,10 @@ html {
 
 body {
   background-color: #1f263d;
-  background-image: url(https://cdn.discordapp.com/attachments/1103420311363387524/1115133597662314640/aClicheName_change_the_expression._Make_the_background_dark_blu_4f130d36-c389-4056-9d8c-2993074eb3f2.png);
+  /*  background-image: url(https://cdn.discordapp.com/attachments/1103420311363387524/1115133597662314640/aClicheName_change_the_expression._Make_the_background_dark_blu_4f130d36-c389-4056-9d8c-2993074eb3f2.png); */
+  background-image: url(/img/footer-bot.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
   height: 100%;
   color: #ffffff;
   font-size: 1.4rem;
@@ -139,6 +142,9 @@ main {
 #messages {
   background-color:#1f263d;
   background-image: linear-gradient(180deg, #1e252f, #1f263d);
+  background-image: url(/img/messages-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
   border-radius: 32px;
   cursor: default !important;
   margin: 32px;
@@ -158,6 +164,7 @@ main {
 main div#messages > div.message {
   background-color: #1c5f6f;
   background-image: linear-gradient(to bottom, #1c5f6f, #1ca091);
+  box-shadow: 0 0 8px rgba(0,0,0,0.4);
   border-radius: 32px;
   font-family: "Montserrat";
   font-size: 1em;
@@ -178,13 +185,15 @@ main div#messages > div.message {
 
 .user {
   color: #3399ff;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
   margin-left: 40px;
 }
 
 .assistant {
   color: #ff69b4;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
   margin-left: 40px;
 }
 
@@ -347,9 +356,63 @@ i.material-icons {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
+
+/*
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f4c7a8;
+  border-top: 10px solid #ff8400;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+*/
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes grow {
+  0%, 80%, 100% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+}
+
+.spinner {
+  margin: 60px auto;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  animation: spin 2s linear infinite;
+}
+
+.dot {
+  width: 16px;
+  height: 16px;
+  background-color: #ff8400;
+  box-shadow: 0 0 4px #000;
+  border-radius: 50%;
+  position: absolute;
+  animation: grow 2s linear infinite;
+}
+
+.dot1 { top: 0%; left: 50%; animation-delay: -1.75s; }
+.dot2 { top: 14.64%; left: 85.36%; animation-delay: -1.5s; }
+.dot3 { top: 50%; left: 100%; animation-delay: -1.25s; }
+.dot4 { top: 85.36%; left: 85.36%; animation-delay: -1.0s; }
+.dot5 { top: 100%; left: 50%; animation-delay: -0.75s; }
+.dot6 { top: 85.36%; left: 14.64%; animation-delay: -0.5s; }
+.dot7 { top: 50%; left: 0; animation-delay: -0.25s; }
+.dot8 { top: 14.64%; left: 14.64%; animation-delay: 0s; }
 
 .errors {
   color: #ff0000;
