@@ -19,10 +19,11 @@ html {
 body {
   background-color: #1f263d;
   /*  background-image: url(https://cdn.discordapp.com/attachments/1103420311363387524/1115133597662314640/aClicheName_change_the_expression._Make_the_background_dark_blu_4f130d36-c389-4056-9d8c-2993074eb3f2.png); */
-  background-image: url(/img/footer-bot.png);
+  /* background-image: url(/img/footer-bot.png); */
+  background-image: url(/img/header-bg.png);
   background-repeat: no-repeat;
-  background-position: bottom left;
-  height: 100%;
+  background-position: top left;
+  background-size: cover;
   color: #ffffff;
   font-size: 1.4rem;
   max-width: 95%;
@@ -127,8 +128,10 @@ main {
 }
 
 .message_window {
-  background-color: #214878;
+  background: linear-gradient(to bottom, #1c6694, #214878);
+  /* background-image: url(/img/tile.png); */
   border-radius: 32px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.4);
   min-height: 96%;
   padding: 10px;
 }
@@ -146,6 +149,7 @@ main {
   background-repeat: no-repeat;
   background-position: right;
   border-radius: 32px;
+  box-shadow: inset 0 0 16px rgba(0,0,0,0.4);
   cursor: default !important;
   margin: 32px;
   overflow-y: scroll;
@@ -205,6 +209,9 @@ main div#messages > div.message {
   text-align: center;
   vertical-align: middle;
   color: #cbe6ef;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, .5);
   width: 100%;
 }
 
@@ -389,30 +396,31 @@ i.material-icons {
 
 .spinner {
   margin: 60px auto;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   position: relative;
-  animation: spin 2s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
 .dot {
-  width: 16px;
-  height: 16px;
-  background-color: #ff8400;
-  box-shadow: 0 0 4px #000;
+  width: 14px;
+  height: 14px;
+  background-color: #f89933;
+  box-shadow: 0 0 8px #000;
   border-radius: 50%;
   position: absolute;
+  transform: translate(-50%, -50%);
   animation: grow 2s linear infinite;
 }
 
-.dot1 { top: 0%; left: 50%; animation-delay: -1.75s; }
-.dot2 { top: 14.64%; left: 85.36%; animation-delay: -1.5s; }
-.dot3 { top: 50%; left: 100%; animation-delay: -1.25s; }
-.dot4 { top: 85.36%; left: 85.36%; animation-delay: -1.0s; }
-.dot5 { top: 100%; left: 50%; animation-delay: -0.75s; }
-.dot6 { top: 85.36%; left: 14.64%; animation-delay: -0.5s; }
-.dot7 { top: 50%; left: 0; animation-delay: -0.25s; }
-.dot8 { top: 14.64%; left: 14.64%; animation-delay: 0s; }
+.dot1 { top: calc(0% - 7px); left: calc(50% - 7px); animation-delay: -1.75s; }
+.dot2 { top: calc(14.64% - 7px); left: calc(85.36% - 7px); animation-delay: -1.5s; }
+.dot3 { top: calc(50% - 7px); left: calc(100% - 7px); animation-delay: -1.25s; }
+.dot4 { top: calc(85.36% - 7px); left: calc(85.36% - 7px); animation-delay: -1.0s; }
+.dot5 { top: calc(100% - 7px); left: calc(50% - 7px); animation-delay: -0.75s; }
+.dot6 { top: calc(85.36% - 7px); left: calc(14.64% - 7px); animation-delay: -0.5s; }
+.dot7 { top: calc(50% - 7px); left: calc(0% - 7px); animation-delay: -0.25s; }
+.dot8 { top: calc(14.64% - 7px); left: calc(14.64% - 7px); animation-delay: 0s; }
 
 .errors {
   color: #ff0000;

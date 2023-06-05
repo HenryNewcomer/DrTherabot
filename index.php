@@ -46,6 +46,7 @@
         <?php include_once(__DIR__ . '/tabs.php'); ?>
     </main>
     <footer>
+        <div><a href="#">Privacy Policy</a></div>
         <div style="display: flex; justify-content: center; margin: 40px auto 0 auto;">
             <stripe-buy-button buy-button-id="buy_btn_1NFcleBClekrrtr0fmDH3Rht" publishable-key="pk_live_51NFRHgBClekrrtr0jP6bGKLoSznmMYF2ZaA8YliLyQAj1arhMir8zr6IvUCzUkORTxQlefWPkkAWJ1j3olQ3pZjJ00AxyutCA1"></stripe-buy-button>
         </div>
