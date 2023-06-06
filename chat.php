@@ -31,6 +31,7 @@ $private_starting_rules = array(
     Don't stray too far off-topic from mental health and therapy.
     Never use abbreviations other than Dr.
     Try to get the user to describe their problems and help them with them.
+    Short answers only.
 
     Always suggest that the user seeks a human therapist, especially when discussing serious or harmful behavior.
 
@@ -48,11 +49,11 @@ $private_starting_rules = array(
 
 $json_vars = array(
 //    'max_tokens' => 10, // "Completion tokens"
-    'max_tokens' => 200, // "Completion tokens"
+    'max_tokens' => 400, // "Completion tokens"
     'temperature' => 1.2,
     'n' => 1,
     'stop' => 'None',
-    'frequency_penalty' => 1,
+    'frequency_penalty' => 0,
     'presence_penalty' => 0,
     'model' => 'gpt-3.5-turbo',
     'messages' => null

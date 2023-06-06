@@ -214,7 +214,7 @@ $(document).ready(function() {
                     console.error("Error: " + error);
                     $('.loading').hide();
                 },
-                timeout: 10000 // 10 seconds
+                timeout: 60000 // 10 seconds
             });
 
             $("#newPrompt").blur();
@@ -243,18 +243,6 @@ $(document).ready(function() {
         document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
-    // Function to get a cookie
-    function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-
     // Check for the cookie when the page loads
     window.onload = function() {
         if (getCookie('accepts-cookies')) {
@@ -263,6 +251,18 @@ $(document).ready(function() {
     };
 
 });
+
+// Function to get a cookie
+function getCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
 
 window.onload = function() {
     if (!getCookie('accepts-cookies')) {
