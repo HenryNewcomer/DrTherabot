@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Therabot :: Always free & always anonymous</title>
     <meta name="description" content="Dr. Therabot is a free, anonymous, and secure chatbot that can help you with your mental health.">
-    <link rel="stylesheet" type="text/css" href="style-min.1.css">
+    <link rel="stylesheet" type="text/css" href="/styles/style-min.3.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>let fullConvo = [<?php echo "['system', '" . $_POST['welcome_message'] . "']"; ?>];</script>
     <script src="/js/global-min.1.js" async defer></script>
@@ -61,7 +61,9 @@
         <?php include_once(__DIR__ . '/tabs.php'); ?>
     </main>
     <footer>
-        <div><a href="/privacy.php" rel="noopener noreferrer" target="_blank">Privacy Policy</a></div>
+        <div><a href="/privacy.php" rel="noopener noreferrer" target="_blank">Privacy Policy</a> |
+            <a href="https://status.openai.com/" rel="noopener noreferrer" target="_blank">OpenAI API Server Status</a></div>
+        
         <div style="display: flex; justify-content: center; margin: 40px auto 0 auto;">
             <stripe-buy-button buy-button-id="buy_btn_1NFcleBClekrrtr0fmDH3Rht" publishable-key="pk_live_51NFRHgBClekrrtr0jP6bGKLoSznmMYF2ZaA8YliLyQAj1arhMir8zr6IvUCzUkORTxQlefWPkkAWJ1j3olQ3pZjJ00AxyutCA1"></stripe-buy-button>
         </div>
