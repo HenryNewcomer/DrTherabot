@@ -34,8 +34,8 @@
         <ul>
             <li>How it works: Dr. Therabot uses large language models to generate text that is tailored to the individual needs of each user. This means that users can be assured that they are getting the most relevant and helpful support possible.</li>
             <li>Who can use it: Dr. Therabot is available to anyone who needs it, regardless of their location, income, or insurance status.</li>
-            <li>How much it costs: Dr. Therabot is <strong>completely free</strong> to use.</li>
-            <li>Privacy: Dr. Therabot is <strong>completely anonymous</strong>. Chats are <em>not</em> saved other than whatever OpenAI saves on their end. This means that users can be assured that their privacy will be respected.</li>
+            <li>How much it costs: Dr. Therabot is <span class="highlight">completely free</span> to use.</li>
+            <li>Privacy: Dr. Therabot is <span class="highlight">completely anonymous</span>. Chats are <em>not</em> saved other than whatever OpenAI saves on their end. This means that users can be assured that their privacy will be respected.</li>
         </ul>
 
         <p>If you are struggling with your mental health, Dr. Therabot is a valuable resource that can help you get the support you need.</p>

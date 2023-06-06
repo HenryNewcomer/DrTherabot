@@ -9,12 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Therabot :: Always free & always anonymous</title>
     <meta name="description" content="Dr. Therabot is a free, anonymous, and secure chatbot that can help you with your mental health.">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style-min.1.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>let fullConvo = [<?php echo "['system', '" . $_POST['welcome_message'] . "']"; ?>];</script>
-    <script src="/js/global.js" async defer></script>
+    <script src="/js/global-min.1.js" async defer></script>
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Cormorant+Garamond|Material+Icons">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180x180.png">
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-N67DE7J9GR"></script>

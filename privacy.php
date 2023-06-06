@@ -4,10 +4,18 @@
         <title>Dr. Therabot :: Always free & always anonymous</title>
         <meta charset="UTF-8">
         <meta name="description" content="Dr. Therabot is a free, anonymous, and secure chatbot that can help you with your mental health.">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style-min.1.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Cormorant+Garamond|Material+Icons">
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+        <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48x48.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180x180.png">
         <style>
             body {
+                margin: 32px;
+                max-width: 100%;
+                padding: 8px;
                 position: relative;
                 text-shadow: 0 0 4px #000000;
             }
@@ -44,7 +52,7 @@
 <body>
     <main>
         <h1>Privacy Policy</h1>
-        <p>This Privacy Policy describes how [Company Name] collects, uses, and shares your personal information when you visit or make a purchase from our website.</p>
+        <p>This Privacy Policy describes how we collect, use, and share your personal information when you visit our website.</p>
 
         <h2>Personal Information We Collect</h2>
 
@@ -70,7 +78,7 @@
 
         <p>We share your personal information with third parties to help us use your information, as described above.</p>
 
-        <p>We also use Google Analytics to help us understand how our customers use the site. You can learn more about how Google uses your personal information here: <a href="https://www.google.com/intl/en/policies/privacy/">https://www.google.com/intl/en/policies/privacy/</a>.</p>
+        <p>We also use Google Analytics to help us understand how our customers use the site. You can learn more about how Google uses your personal information <a href="https://www.google.com/intl/en/policies/privacy/">here</a>.</p>
 
         <p>Finally, we may also share your personal information to comply with applicable laws and regulations, to respond to a subpoena, search warrant or other lawful request for information we receive, or to protect our rights.</p>
 
@@ -110,7 +118,7 @@
 
         <hr>
 
-        <h3>tl;dr ("<em>Too Long; Didn't Read</em>"):</h3>
+        <h3>tl;dr<br>("<em>Too Long; Didn't Read</em>"):</h3>
             <p>Dr. Therabot is a free, anonymous, and secure chatbot that can help you with your mental health. We do not collect any personal information from you, and we do not store any of your messages. We do not use cookies, and we do not track you in any way. We do not sell your data to third parties, and we do not use your data for any purpose other than to provide you with a better experience.</p>
         </main>
     </body>

@@ -51,11 +51,13 @@ a:link,
 a:active,
 a:visited {
   color: #ffc824;
+  font-weight: bold;
   text-decoration: none;
 }
 
 a:hover {
   color: #ffad77;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -63,6 +65,12 @@ h1, h2, h3 {
   color: #d3e9ff;
   font-size: 2em;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+  h1, h2, h3 {
+    text-align: center;
+  }
 }
 
 hr {
@@ -86,6 +94,26 @@ div.with-img img {
 
 div.with-img .right {
   max-width: calc(100% - 416px);
+}
+
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+  div.with-img {
+    flex-direction: column;
+  }
+  
+  div.with-img img {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  
+  div.with-img .right {
+    max-width: 100%;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
 }
 
 div.center {
