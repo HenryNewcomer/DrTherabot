@@ -9,9 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Therabot :: Always free & always anonymous</title>
     <meta name="description" content="Dr. Therabot is a free, anonymous, and secure chatbot that can help you with your mental health.">
-    <link rel="stylesheet" type="text/css" href="/styles/style-min.3.css">
-    <script async defer src="/js/global-min.2.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles/style-min.3.css">
+    <script async defer src="/js/global-min.3.js"></script>
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Cormorant+Garamond|Material+Icons">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
