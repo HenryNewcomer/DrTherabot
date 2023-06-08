@@ -242,11 +242,6 @@ $(document).ready(function() {
         }
         document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
-
-    // Check for the cookie when the page loads
-    window.onload = function() {
-    };
-
 });
 
 // Function to get a cookie
