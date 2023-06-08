@@ -245,9 +245,6 @@ $(document).ready(function() {
 
     // Check for the cookie when the page loads
     window.onload = function() {
-        if (getCookie('accepts-cookies')) {
-            document.getElementById('cookie-banner').style.display = 'none';
-        }
     };
 
 });
@@ -266,6 +263,8 @@ function getCookie(name) {
 
 window.onload = function() {
     if (!getCookie('accepts-cookies')) {
-      document.getElementById('cookie-banner').style.display = 'block';
+        document.getElementById('cookie-banner').style.display = 'block';
+    } else {
+        document.getElementById('cookie-banner').style.display = 'none';
     }
 };
