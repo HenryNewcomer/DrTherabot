@@ -3,35 +3,40 @@
 <head>
     <meta charset="UTF-8" />
     <title>Speech to Text</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <style>
         #record {
-            background-color: blue; /* Green */
-            border-width: medium;
-            border-color: black;
-            color: white;
-            padding: 20px;
+            background: linear-gradient(45deg, #2b388a, #132456, #2b388a);
+            box-shadow: 0 0 4px rgba(80, 173, 249, 0.8);
+            border: 2px solid rgba(80, 173, 249, 1);
+            border-radius: 32px;
+            color: #82A1E1;
+            cursor: pointer;
             text-align: center;
             text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
+            font-size: 4em;
             margin: 4px 2px;
-            cursor: pointer;
-            max-width: 50%;
-            max-height: 15%;
-            border-radius: 50%;
-            left: 100px;
-            right: 100px;
             position: relative;
+            padding: 10px;
+            height: 140px;
+            width: 100%;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
-        #recordedAudio {
-          left: 100px;
-          right: 100px;
-          position: relative;
+        #record:hover {
+            background: linear-gradient(45deg, #3c4fbb, #19266c, #3c4fbb);
+            box-shadow: 0 0 10px rgba(83, 255, 159, 0.6);
+            color: #649fda;
+        }
+
+        #record.pressed {
+            background: linear-gradient(45deg, #8a2b2b, #561313, #8a2b2b);
+            box-shadow: 0 0 4px rgba(249, 80, 80, 0.8);
+            border: 2px solid rgba(249, 80, 80, 1);
         }
 
         .material-symbols-outlined {
+            font-size: 100px;
             font-variation-settings:
             'FILL' 0,
             'wght' 400,
@@ -104,11 +109,11 @@
                 console.log('RECORD CLICKED');
                 recordOn = !recordOn;
                 if (recordOn) {
-                    record.style.backgroundColor = "red";
+                    $("#record").toggleClass("pressed");
                     audioChunks = [];
                     rec.start();
                 } else {
-                    record.style.backgroundColor = "blue";
+                    $("#record").toggleClass("pressed");
                     rec.stop();
                 }
             });

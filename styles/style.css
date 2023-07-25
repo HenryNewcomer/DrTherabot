@@ -83,6 +83,7 @@ hr {
 
 iframe {
   border: 0;
+  height: 170px;
 }
 
 div.with-img {
@@ -416,6 +417,29 @@ input#newPrompt {
   }
 }
 
+.undo {
+  background: linear-gradient(45deg, #2b388a, #132456, #2b388a);
+  border: none;
+  border-radius: 16px;
+  color: #82A1E1;
+  cursor: pointer;
+  font-size: 2em;
+  padding: 10px;
+  width: 18vw;
+  height: 140px;
+  border: 2px solid rgba(80, 173, 249, 1);
+  box-shadow: 0 0 4px rgba(80, 173, 249, 0.8);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+  .undo {
+    padding: 0;
+    margin: 0;
+    height: 60px;
+  }
+}
+
 i.material-icons {
   font-size: 82px;
   font-variation-settings:
@@ -435,7 +459,7 @@ i.material-icons {
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
-  'wght' 400,
+  'wght' 800,
   'GRAD' 0,
   'opsz' 48
 }

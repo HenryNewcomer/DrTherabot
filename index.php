@@ -54,8 +54,8 @@
                     <input type="text" id="newPrompt" name="newPrompt" placeholder="Go ahead :) Say 'hi'">
                 </form>
                 <div class="sender_button_container">
-                    <button class="send_message" id="submit"><i class="material-icons">send</i></button>
                     <button class="undo" id="undo"><i class="material-symbols-outlined">undo</i></button>
+                    <button class="send_message" id="submit"><i class="material-icons">send</i></button>
                     <iframe src="speech.html" allow="microphone"></iframe>
                 </div>
             </div>

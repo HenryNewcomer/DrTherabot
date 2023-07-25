@@ -11,11 +11,15 @@ if (!isset($_FILES['audio']) || empty($_FILES['audio'])) {
     die('Invalid request.');
 }
 
-$client = OpenAI::client('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'); 
+$client = OpenAI::client(''); 
 $audio_format = 'audio/mpeg-3';
 
 if (($_FILES['audio']['name'] != 'blob') || $_FILES['audio']['full_path'] != 'blob') {
-    die('Naming error.');
+    $error = json_encode(array(
+        'success' => false,
+        'text' => 'Naming error.'
+    ));
+    die($error);
 }
 
 $files_filtered = array(
@@ -35,7 +39,7 @@ $response_text = $client->audio()->transcribe([
     "response_format" => 'verbose_json'
 ]);
 
-// Remember to delete the temporary file
+// Remember to delete the temporary file!
 unlink($temp_filename);
 
 if (isset($response_text->segments[0])) {
@@ -43,7 +47,11 @@ if (isset($response_text->segments[0])) {
         'text' => $response_text->segments[0]->text
     );
 } else {
-    die('No response.');
+    $error = json_encode(array(
+        'success' => false,
+        'text' => 'No response'
+    ));
+    die($error);
 }
 
 if (!empty($response_array['text'])) {
@@ -53,7 +61,11 @@ if (!empty($response_array['text'])) {
         'text' => $response_array['text'])
     );
 } else {
-    die('[Error: unable to transcribe voice.]');
+    $error = json_encode(array(
+        'success' => false,
+        'text' => '[Error: unable to transcribe voice.]'
+    ));
+    die($error);
 }
 
 ?>

@@ -11,10 +11,11 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 define('IS_USING_POST', ($_SERVER['REQUEST_METHOD'] == 'POST'));
 
-$client = OpenAI::client('YOUR-OPENAI-API-KEY-HERE'); 
+$client = OpenAI::client(''); 
 
 ####
 # TO ADD:
+# - Undo last message.
 # - Only talk about relevant info. I shouldn't be able to ask for a hex color and get an actual answer for example, lmao!
 ######
 $private_starting_rules = array(
