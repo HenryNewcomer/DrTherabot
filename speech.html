@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Speech to Text</title>
+    <style>
+        #record {
+            background-color: red; /* Green */
+            border-width: medium;
+            border-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            max-width: 50%;
+            max-height: 15%;
+            border-radius: 50%;
+            left: 100px;
+            right: 100px;
+            position: relative;
+        }
+
+        #recordedAudio {
+          left: 100px;
+          right: 100px;
+          position: relative;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script>
+        let rec;
+        let audioChunks = [];
+        let recordOn = false;
+
+        function handlerFunction(stream) {
+            rec = new MediaRecorder(stream);
+            rec.ondataavailable = e => {
+                audioChunks.push(e.data);
+
+                const audio = document.querySelector('audio');
+                const blob = new Blob(audioChunks, {type: 'audio/mpeg-3'});
+                const audioURL = window.URL.createObjectURL(blob);
+
+                var formData = new FormData();
+                formData.append('audio', blob);
+
+                //audio.controls = true;
+                //audio.autoplay = true;
+                audio.src = audioURL;
+
+                sendRec(formData);
+                console.log("recorder stopped");
+            }
+        }
+
+        function sendRec(formData) {
+            $.ajax({
+                type: "POST",
+                url: "speech.php",
+                data: formData, /* TODO: add newPromptText & fullConvo */
+                processData: false,  // tell jQuery not to process the data
+                contentType: false,  // tell jQuery not to set contentType
+
+                success: function(data) {
+                    console.log(data);
+                },
+                error: function(xhr, status, error) {
+                    console.error("Unable to send recording. Error: " + error);
+                    $('.loading').hide();
+                },
+                timeout: 180000 // 30 seconds
+            });
+            return;
+        }
+
+        $(document).ready(function(){
+            $('#record').click(function() {
+                console.log('RECORD CLICKED');
+                recordOn = !recordOn;
+                if (recordOn) {
+                    record.style.backgroundColor = "blue";
+                    audioChunks = [];
+                    rec.start();
+                    console.log('recordOn');
+                } else {
+                    record.style.backgroundColor = "red";
+                    rec.stop();
+                    console.log('recordOff');
+                }
+            });
+        });
+
+        navigator.mediaDevices.getUserMedia({audio:true})
+          .then(stream => {handlerFunction(stream)});
+    </script>
+</head>
+<body>
+    <div>
+        <button id=record>Rec</button>
+        <audio id=recordedAudio></audio>
+    </div>
+</body>
+</html>
