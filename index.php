@@ -54,11 +54,11 @@
                     <input type="text" id="newPrompt" name="newPrompt" placeholder="Go ahead :) Say 'hi'">
                 </form>
                 <div class="sender_button_container">
-                    <?php if(isset($_GET['test-undo']) {
+                    <?php if(isset($_GET['test-undo'])) {
                         echo '<button class="undo" id="undo"><i class="material-symbols-outlined">undo</i></button>';
                     } ?>
                     <button class="send_message" id="submit"><i class="material-icons">send</i></button>
-                    <?php if(isset($_GET['test-rec']) {
+                    <?php if(isset($_GET['test-rec'])) {
                         echo '<iframe id="microphone-iframe" src="speech.html" allow="microphone" style="display: none;"></iframe>';
                     } ?>
                 </div>
