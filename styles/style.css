@@ -440,6 +440,7 @@ input#newPrompt {
 
 .undo {
   border-radius: 16px;
+  font-size: 82px;
 }
 
 @media only screen and (min-width: 375px) and (max-width: 812px) {
