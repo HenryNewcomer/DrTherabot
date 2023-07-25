@@ -263,4 +263,15 @@ window.onload = function() {
     } else {
         document.getElementById('cookie-banner').style.display = 'none';
     }
+
+    // Check if microphone is working
+    navigator.mediaDevices.getUserMedia({ audio: true })
+        .then(function(stream) {
+            // Microphone is working, show the iframe
+            document.getElementById('microphone-iframe').style.display = 'block';
+        })
+        .catch(function(err) {
+            // Microphone is not working, keep the iframe hidden
+            console.log('Microphone is not working: ' + err);
+        });
 };
