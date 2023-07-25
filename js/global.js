@@ -102,7 +102,10 @@ $(document).ready(function() {
     };
 
     $('.tab').on('click', function(event) {
-        event.preventDefault();
+        // Only prevent the default event if the href starts with '#'
+        if (this.href.startsWith('#')) {
+            event.preventDefault();
+        }
         // Get the id of the clicked tab.
         var tabId = this.href.split('#')[1];
         // Hide the current content div.
