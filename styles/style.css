@@ -241,7 +241,8 @@ main {
   -moz-background-size: cover;
   -o-background-size: cover;
   border-radius: 32px;
-  box-shadow: inset 0 0 8px rgba(0,0,0,0.8);
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.8),
+              0 0 8px rgba(0,0,0,0.8);
   cursor: default !important;
   margin: 32px;
   overflow-y: scroll;
@@ -272,7 +273,6 @@ main {
 @media only screen and (min-width: 375px) and (max-width: 812px) {
   .message {
     font-size: 0.9em;
-    margin: 4px 0 18px 0;
     padding: 12px 18px;
     text-indent: 20px;
   }
@@ -280,19 +280,17 @@ main {
 
 .user {
   color: #3399ff;
-  font-size: 1.2em;
-  font-weight: bold;
   text-align: right;
 }
 
 .assistant {
   color: #ff69b4;
-  font-size: 1.2em;
-  font-weight: bold;
 }
 
 .user, .assistant {
   border-radius: 32px 32px 0 0;
+  font-size: 1.2em;
+  font-weight: bolder;
   padding: 4px 40px;
 }
 
@@ -325,7 +323,7 @@ main {
 }
 @media only screen and (min-width: 375px) and (max-width: 812px) {
   .your_message {
-    margin: 4px 4px 0 4px;
+    margin: 8px 4px 0 4px;
     padding: 12px 0;
   }
 }
@@ -403,7 +401,7 @@ input#newPrompt {
   }
 }
 
-.send_message {
+.undo, .send_message {
   background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
   border: none;
   border-radius: 32px;
@@ -418,22 +416,22 @@ input#newPrompt {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-.send_message:hover {
+.undo:hover, .send_message:hover {
   background-image: linear-gradient(to right top, #f48fcf, #db8fd1, #d89be6, #c3a9f0, #b0b8f8,  #51fffa, #70ffff);
   border: 2px solid rgba(200, 212, 255, 1);
   box-shadow: 0 0 10px rgba(200, 212, 255, 0.6);
   color: #649fda;
 }
 
-.send_message:active {
+.undo:active, .send_message:active {
   background-image: linear-gradient(to right top, #a0147b, #964f93, #86407c, #7a4b98, #594b8b, #4c70b6, #3b80c2, #3291a8, #1b91ce, #1392cf, #1bafbc, #2fd1c3);
   box-shadow: inset 0 8px 2px rgba(0, 0, 0, 0.6), 0 0 12px 4px rgba(0, 0, 0, 0.4);
 }
 
 @media only screen and (min-width: 375px) and (max-width: 812px) {
-  .send_message {
-    padding: 0;
-    margin: 0;
+  .undo, .send_message {
+    padding: 4px;
+    margin: 4px;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
     height: 60px;
     width: 200px;
@@ -441,25 +439,12 @@ input#newPrompt {
 }
 
 .undo {
-  background: linear-gradient(45deg, #2b388a, #132456, #2b388a);
-  border: none;
   border-radius: 16px;
-  color: #82A1E1;
-  cursor: pointer;
-  font-size: 2em;
-  padding: 10px;
-  width: 18vw;
-  height: 140px;
-  border: 2px solid rgba(80, 173, 249, 1);
-  box-shadow: 0 0 4px rgba(80, 173, 249, 0.8);
-  transition: background 0.3s ease, color 0.3s ease;
 }
 
 @media only screen and (min-width: 375px) and (max-width: 812px) {
   .undo {
-    padding: 0;
-    margin: 0;
-    height: 60px;
+    width: auto;
   }
 }
 
