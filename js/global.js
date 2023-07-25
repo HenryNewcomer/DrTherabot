@@ -133,7 +133,8 @@ $(document).ready(function() {
                     message += "<p>" + sentences[i].trim() + "</p>\n"; // wrap each sentence in a p tag
                 }
             }
-            s = "<div class="+role+">"+who+":</div><div class=\"message\">"+message+"</div>\n"; // TODO: Filter content for html chars.
+            s = "<div class=\"message-bg-fill\"><div class="+role+">"+who+":</div>\n" +
+                    "<div class=\"message\">"+message+"</div></div>\n"; // TODO: Filter content for html chars.
         }
         return s;
     }
