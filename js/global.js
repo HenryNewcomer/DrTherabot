@@ -109,6 +109,10 @@ $(document).ready(function() {
         $('.tabbed-content').hide();
         // Show the content div associated with the clicked tab.
         $('#' + tabId).show();
+        // Scroll to the content div.
+        $('html, body').animate({
+            scrollTop: $('#' + tabId).offset().top
+        }, 500);
     });
 
 
