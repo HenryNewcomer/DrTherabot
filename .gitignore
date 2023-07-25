@@ -3,3 +3,4 @@ _private_/
 vendor/
 *-min*
 *~
+.aider*
