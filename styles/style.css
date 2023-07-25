@@ -81,6 +81,10 @@ hr {
   margin: 64px 0;
 }
 
+iframe {
+  border: 0;
+}
+
 div.with-img {
   align-items: flex-start;
   display: flex;
@@ -426,6 +430,14 @@ i.material-icons {
       'wght' 700,
       'opsz' 32
   }
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
 }
 
 .loading {

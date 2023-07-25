@@ -10,10 +10,10 @@
     <title>Dr. Therabot :: Always free & always anonymous</title>
     <meta name="description" content="Dr. Therabot is a free, anonymous, and secure chatbot that can help you with your mental health.">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/styles/style-min.3.css">
-    <script async defer src="/js/global-min.3.js"></script>
+    <link rel="stylesheet" type="text/css" href="/styles/style.css">
+    <script async defer src="/js/global.js"></script>
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Cormorant+Garamond|Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Cormorant+Garamond|Material+Icons|Material+Symbols+Outlined">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
@@ -55,6 +55,8 @@
                 </form>
                 <div class="sender_button_container">
                     <button class="send_message" id="submit"><i class="material-icons">send</i></button>
+                    <button class="undo" id="undo"><i class="material-symbols-outlined">undo</i></button>
+                    <iframe src="speech.html" allow="microphone"></iframe>
                 </div>
             </div>
         </div>

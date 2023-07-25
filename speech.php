@@ -11,7 +11,7 @@ if (!isset($_FILES['audio']) || empty($_FILES['audio'])) {
     die('Invalid request.');
 }
 
-$client = OpenAI::client('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'); 
+$client = OpenAI::client('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'); 
 $audio_format = 'audio/mpeg-3';
 
 if (($_FILES['audio']['name'] != 'blob') || $_FILES['audio']['full_path'] != 'blob') {
@@ -38,6 +38,22 @@ $response_text = $client->audio()->transcribe([
 // Remember to delete the temporary file
 unlink($temp_filename);
 
-var_dump($response_text);
+if (isset($response_text->segments[0])) {
+    $response_array = array(
+        'text' => $response_text->segments[0]->text
+    );
+} else {
+    die('No response.');
+}
+
+if (!empty($response_array['text'])) {
+    // Encode the obj
+    echo json_encode(array(
+        'success' => true,
+        'text' => $response_array['text'])
+    );
+} else {
+    die('[Error: unable to transcribe voice.]');
+}
 
 ?>
