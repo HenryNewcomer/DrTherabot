@@ -102,20 +102,13 @@ $(document).ready(function() {
     };
 
     $('.tab').on('click', function(event) {
-        // Only prevent the default event if the href starts with '#'
-        if (this.href.startsWith('#')) {
-            event.preventDefault();
-        }
+        event.preventDefault();
         // Get the id of the clicked tab.
         var tabId = this.href.split('#')[1];
         // Hide the current content div.
         $('.tabbed-content').hide();
         // Show the content div associated with the clicked tab.
         $('#' + tabId).show();
-        // Scroll to the content div.
-        $('html, body').animate({
-            scrollTop: $('#' + tabId).offset().top
-        }, 500);
     });
 
 
@@ -270,15 +263,4 @@ window.onload = function() {
     } else {
         document.getElementById('cookie-banner').style.display = 'none';
     }
-
-    // Check if microphone is working
-    navigator.mediaDevices.getUserMedia({ audio: true })
-        .then(function(stream) {
-            // Microphone is working, show the iframe
-            document.getElementById('microphone-iframe').style.display = 'block';
-        })
-        .catch(function(err) {
-            // Microphone is not working, keep the iframe hidden
-            console.log('Microphone is not working: ' + err);
-        });
 };

@@ -58,8 +58,8 @@
                         echo '<button class="undo" id="undo"><i class="material-symbols-outlined">undo</i></button>';
                     } ?>
                     <button class="send_message" id="submit"><i class="material-icons">send</i></button>
-                    <?php if(isset($_GET['test-rec'])) {
-                        echo '<iframe id="microphone-iframe" src="speech.html" allow="microphone" style="display: none;"></iframe>';
+                    <?php if(isset($_GET['test-mic'])) {
+                        echo '<iframe class="record" src="speech.html" allow="microphone"></iframe>';
                     } ?>
                 </div>
             </div>
