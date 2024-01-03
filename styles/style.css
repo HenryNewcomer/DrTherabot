@@ -20,8 +20,8 @@ html {
 body {
   background-color: #1f263d;
   /*  background-image: url(https://cdn.discordapp.com/attachments/1103420311363387524/1115133597662314640/aClicheName_change_the_expression._Make_the_background_dark_blu_4f130d36-c389-4056-9d8c-2993074eb3f2.png); */
-  /* background-image: url(/img/footer-bot.png); */
-  background-image: url(/img/header-bg.png);
+  /* background-image: url(../img/footer-bot.png); */
+  background-image: url(../img/header-bg.png);
   background-repeat: no-repeat;
   background-position: top left;
   background-size: cover;
@@ -216,7 +216,7 @@ main {
   /*background: linear-gradient(45deg, #61adea, #143761);*/
   background-image: linear-gradient(to right top, #61adea, #5395cf, #457eb5, #36679b, #285282, #244774, #1f3d66, #1a3358, #1d3051, #1e2c4a, #1f2944, #1f263d);
  /* background-image: linear-gradient(to right top, #ba6d99, #aa6b9f, #976ba3, #826aa5, #6c6aa5, #6370ac, #5877b2, #4b7db7, #488cc7, #439bd7, #3cabe7, #32bbf5); */
-  /* background-image: url(/img/tile.png); */
+  /* background-image: url(../img/tile.png); */
   border-radius: 32px;
   box-shadow: 0 0 16px rgba(0,0,0,0.4);
   min-height: 96%;
@@ -232,7 +232,7 @@ main {
 #messages {
   background-color:#1f263d;
   background-image: linear-gradient(to right top, #096e99, #007e9f, #118ea0, #369da0, #56ab9e, #52a49a, #4e9d96, #4b9692, #317985, #255c71, #234059, #1f263d);
-  /* background-image: url(/img/messages-bg.png); */
+  /* background-image: url(../img/messages-bg.png); */
   background-repeat: no-repeat;
   background-position: right;
   border: 0;
