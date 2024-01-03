@@ -10,15 +10,15 @@
     <title>Dr. Therabot :: Always free & always anonymous</title>
     <meta name="description" content="Dr. Therabot is a free, anonymous, and secure chatbot that can help you with your mental health.">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/styles/style.css">
-    <script async defer src="/js/global.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script async defer src="js/global.js"></script>
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Cormorant+Garamond|Material+Icons|Material+Symbols+Outlined">
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/img/favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-180x180.png">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180x180.png">
     <script>let fullConvo = [<?php echo "['system', '" . $_POST['welcome_message'] . "']"; ?>];</script>
 </head>
 <!-- Google tag (gtag.js) -->
@@ -67,7 +67,7 @@
         <?php include_once(__DIR__ . '/tabs.php'); ?>
     </main>
     <footer>
-        <div><a href="/privacy.php" rel="noopener noreferrer" target="_blank">Privacy Policy</a> |
+        <div><a href="privacy.php" rel="noopener noreferrer" target="_blank">Privacy Policy</a> |
             <a href="https://status.openai.com/" rel="noopener noreferrer" target="_blank">OpenAI API Server Status</a></div>
         
         <div style="display: flex; justify-content: center; margin: 40px auto 0 auto;">
@@ -76,10 +76,9 @@
         <p>Contact:<br>
            dr.therabot@gmail.com</p>
         <p>Copyright &copy; Henry Newcomer 2023</p>
-        <p><img src="/img/thumbs-up.png" alt=":)" width="120" height="120"></p>
     </footer>
     <div id="cookie-banner">
-        <p><em>We</em> don't save your data, but Google Analytics stores cookies on your computer. <a href="/privacy.php">Learn more</a></p>
+        <p><em>We</em> don't save your data, but Google Analytics stores cookies on your computer. <a href="privacy.php">Learn more</a></p>
         <button id="accept-cookies">Accept</button>
     </div>
 </body>

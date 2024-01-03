@@ -48,7 +48,7 @@
     </div>
     <div class="tabbed-content" id="resources">
         <h2>Online Help &amp; Resources</h2>
-        <div class="center"><img src="/img/helping-each-other.png" alt="Helping people" width="400" height="400"></div>
+        <div class="center"><img src="img/helping-each-other.png" alt="Helping people" width="400" height="400"></div>
         <ul class="resources">
             <li><div class="resource">National Suicide Prevention Lifeline:</div><br>
                 <div class="contact-resource">1-800-273-8255</div><br>
@@ -86,7 +86,7 @@
         <h2>How Service Animals Help</h2>
         <p>Animals have been shown to have a number of benefits for mental health. For example, they can help to reduce stress, anxiety, and depression. They can also help to improve mood, social interaction, and overall well-being.</p>
         <div class="with-img">
-            <img src="/img/doggo.png" alt="Kid &amp; dog" width="400" height="400">
+            <img src="img/doggo.png" alt="Kid &amp; dog" width="400" height="400">
             <div class="right">
                 <p>One of the ways that animals can help mental health is by providing companionship. Companionship is important for mental health because it provides a sense of belonging and support. Animals can provide companionship in a number of ways. They can be a source of comfort and support, especially during difficult times. They can also provide a sense of purpose and responsibility.</p>
                 <p>Another way that animals can help mental health is by providing physical activity. Physical activity is important for mental health because it releases endorphins, which have mood-boosting effects. Animals can encourage physical activity in a number of ways. They can provide a reason to get outside and exercise. They can also provide motivation to keep moving.</p>
