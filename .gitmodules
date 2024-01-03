@@ -1,0 +1,3 @@
+[submodule "chat/lib/openai-php/client"]
+	path = chat/lib/openai-php/client
+	url = https://github.com/openai-php/client
