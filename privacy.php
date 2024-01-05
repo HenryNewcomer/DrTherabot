@@ -4,7 +4,7 @@
         <title>Dr. Therabot :: Always free & always anonymous</title>
         <meta charset="UTF-8">
         <meta name="description" content="Dr. Therabot is a free, anonymous, and secure chatbot that can help you with your mental health.">
-        <link rel="stylesheet" type="text/css" href="styles/style-min.3.css">
+        <link rel="stylesheet" type="text/css" href="styles/style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bebas+Neue|Montserrat|Cormorant+Garamond|Material+Icons">
         <link rel="icon" type="image/x-icon" href="img/favicon.ico">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
